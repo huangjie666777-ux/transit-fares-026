@@ -64,3 +64,49 @@ export interface JourneyResult {
   segments: RideSegment[];
   transferWaits: { stopId: string; wait: number }[];
 }
+
+export interface FareSchemeInput {
+  singleFares?: Record<string, number>;
+  passes?: PassFareInput[];
+}
+
+export interface PassFareInput {
+  id: string;
+  name: string;
+  price: number;
+  validMinutes: number;
+  applicableTripIds: string[];
+}
+
+export interface PassFare {
+  id: string;
+  name: string;
+  price: number;
+  validMinutes: number;
+  applicableTripIds: string[];
+}
+
+export interface FareScheme {
+  singleFares: Record<string, number>;
+  passes: PassFare[];
+}
+
+export interface TicketQuote {
+  kind: 'single' | 'pass';
+  ticketId: string;
+  name: string;
+  price: number;
+  purchaseMinute: number;
+  expiryMinute: number;
+  coveredSegmentIndexes: number[];
+}
+
+export interface FareQuote {
+  feasible: boolean;
+  tickets: TicketQuote[];
+  totalPrice: number;
+  ticketCount: number;
+  singleTotal: number | null;
+  missingSingleTripIds: string[];
+  uncoveredTripIds: string[];
+}

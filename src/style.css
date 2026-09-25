@@ -33,3 +33,7 @@ button:disabled { background: #9db4c8; cursor: not-allowed; }
 .json-editor { width: 100%; box-sizing: border-box; margin-top: .75rem; font-family: ui-monospace, 'Cascadia Code', Menlo, monospace; font-size: .8rem; border: 1px solid #c3cfd9; border-radius: 6px; padding: .6rem; }
 .error-box { margin-top: .75rem; background: #fdecea; border: 1px solid #e5b3ae; border-radius: 6px; padding: .5rem .75rem; color: #7a1c16; }
 .error-box ul { margin: .4rem 0 0; padding-left: 1.25rem; }
+.fare-quote { margin-top: 1rem; border-top: 1px dashed #c3cfd9; padding-top: .75rem; }
+.fare-quote h3 { margin: 0 0 .5rem; font-size: .95rem; }
+.tickets { padding-left: 1.25rem; display: grid; gap: .5rem; }
+.ticket { background: #f4f9f4; border-left: 4px solid #2e6b41; border-radius: 6px; padding: .5rem .75rem; display: grid; gap: .15rem; }

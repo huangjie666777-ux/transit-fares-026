@@ -1,5 +1,10 @@
 import type { NetworkInput } from './types';
 
+export interface FareSchemeSample {
+  singleFares: Record<string, number>;
+  passes: { id: string; name: string; price: number; validMinutes: number; trips: string[] }[];
+}
+
 export const sampleNetwork: NetworkInput = {
   stops: [
     { id: 'A', name: '中央公园', minTransferMinutes: 3 },
@@ -56,5 +61,19 @@ export const sampleNetwork: NetworkInput = {
         { stopId: 'F', arrive: 1500, depart: null },
       ],
     },
+  ],
+};
+
+export const passSaverFareSample: FareSchemeSample = {
+  singleFares: { T1: 300, T2: 400, T3: 500, T4: 350, T5: 600 },
+  passes: [
+    { id: 'P1', name: '2路/4路 150分钟联票', price: 600, validMinutes: 150, trips: ['T2', 'T4'] },
+  ],
+};
+
+export const singleSaverFareSample: FareSchemeSample = {
+  singleFares: { T1: 300, T2: 400, T3: 500, T4: 350, T5: 600 },
+  passes: [
+    { id: 'P1', name: '2路/4路 150分钟联票', price: 900, validMinutes: 150, trips: ['T2', 'T4'] },
   ],
 };

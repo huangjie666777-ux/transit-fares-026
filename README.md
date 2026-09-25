@@ -4,10 +4,9 @@
 
 ## 启动方式
 
-需要 Node.js 22。若当前终端找不到 Node，先设置工具路径：
+使用已准备好的 Node.js 22.19.0 和 npm 10.9.3，可直接运行：
 
 ```bash
-export PATH="/home/hj/.local/share/cc-codex/toolchains/node-v22.16.0-case002/node-v22.16.0-linux-x64/bin:$PATH"
 npm ci          # 首次或依赖损坏时
 npm run dev     # 启动开发服务器，默认 http://localhost:5173/
 ```
